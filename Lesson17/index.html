@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <link href="../css/style.css" rel="stylesheet"> </head>
+
+<body>
+<div id="myApp">
+    <h1>事件处理器</h1>
+    <input id="txtName" v-on:keyup="txtKeyup($event)">
+    <button id="btnOK" v-on:click="btnClick($event)">OK</button>
+</div>
+<script>
+    var myApp = new Vue({
+        el: '#myApp', 
+        data: {},
+        methods: {
+            txtKeyup: function(event){
+                this.debugLog(event);
+            },
+            btnClick: function(event){
+                this.debugLog(event);
+            },
+            debugLog:function(event){
+                console.log(
+                    event.srcElement.tagName, 
+                    event.srcElement.id, 
+                    event.srcElement.innerHTML, 
+                    event.key?event.key:""
+                );
+            },
+        },
+    });
+</script>
+</body>
+
+</html>

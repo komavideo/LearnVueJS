@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <link href="../css/style.css" rel="stylesheet"> </head>
+
+<body>
+<div id="myApp">
+    <h1>JS对象迭代</h1>
+    <div v-for="(value, key) in mygame">
+        {{ key }} : {{ value }}
+    </div>
+</div>
+<script>
+    var myApp = new Vue({
+        el: '#myApp', 
+        data: {
+            mygame: {
+                title: "乌贼娘2代",
+                price: 350,
+                pubdate: "2017年夏季",
+                category: "射击",
+                agerange: "全年龄",
+            },
+        },
+    });
+</script>
+</body>
+
+</html>

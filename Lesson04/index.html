@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <link href="../css/style.css" rel="stylesheet"> </head>
+
+<body>
+<div id="myApp">
+    <p>您最喜欢的游戏是：{{mygame}}</p>
+    <input v-model="mygame">
+</div>
+<script>
+    var myApp = new Vue({
+        el: '#myApp',
+        data: {
+            mygame: '超级马里奥GTA'
+        },
+    });
+</script>
+</body>
+
+</html>

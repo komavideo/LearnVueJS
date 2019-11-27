@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <link href="../css/style.css" rel="stylesheet"> </head>
+<body>
+<div id="myApp">
+    <h1>表单单选按钮</h1>
+
+    <h3>选择性别</h3>
+    <input type="radio" id="male" value="男" v-model="pickedSex">
+    <label for="male">男</label>
+    <br>
+    <input type="radio" id="female" value="女" v-model="pickedSex">
+    <label for="female">女</label>
+
+    <h3>选择爱好</h3>
+    <input type="radio" id="game" value="玩游戏" v-model="pickedHobby">
+    <label for="game">玩游戏</label>
+    <br>
+    <input type="radio" id="movie" value="看电影" v-model="pickedHobby">
+    <label for="movie">看电影</label>
+
+    <h3>选择结果</h3>
+    <p>性别: {{ pickedSex }}</p>
+    <p>爱好: {{ pickedHobby }}</p>
+
+</div>
+<script>
+    var myApp = new Vue({
+        el: '#myApp', 
+        data: {
+            pickedSex: "",
+            pickedHobby: "",
+        },
+        methods: {
+        },
+    });
+</script>
+</body>
+
+</html>

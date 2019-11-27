@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <link href="../css/style.css" rel="stylesheet"> </head>
+
+<body>
+<div id="myApp">
+    <p>{{message}}</p>
+    <p>{{message | toupper }}</p>
+    <hr>
+    <p>现在的vue.js学习进度是{{num}}({{num | topercentage}})。</p>
+</div>
+<script>
+    var myApp = new Vue({
+        el: '#myApp',
+        data: {
+            message: 'hello vue.js world.',
+            num: 0.3
+        },
+        filters: {
+            toupper: function(value){
+                return value.toUpperCase();
+            },
+            topercentage: function(value){
+                return value * 100 + '%';
+            },
+        },
+    });
+</script>
+</body>
+
+</html>

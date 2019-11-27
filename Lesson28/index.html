@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <link href="../css/style.css" rel="stylesheet"> </head>
+<body>
+<div id="myApp">
+    <div>请输入您的名字：<input v-model="myname"></div>
+    <hr/>
+    <say-hello :pname="myname" />
+</div>
+<script>
+    Vue.component('say-hello', {
+        props: ['pname'],
+        template: '<div>你好，<strong>{{pname}}</strong>！</div>',
+    });
+    var myApp = new Vue({
+        el: '#myApp', 
+        data: {
+            myname: 'Koma'
+        }
+    });
+</script>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <link href="../css/style.css" rel="stylesheet"> </head>
+<body>
+<div id="myApp">
+    <h1>身世之谜</h1>
+    <show-member-info name="koma" :age="25" :detail="{address:'earth', language:'世界语'}"></show-member-info>
+</div>
+<script>
+    Vue.component('show-member-info', {
+        props: {
+            name: {
+                type: String,
+                required: true,
+            },
+            age: {
+                type: Number,
+                validator: function (value) {
+                    return value >= 0 && value <= 130;
+                }                
+            },
+            detail: {
+                type: Object,
+                default: function() {
+                    return {
+                        address: 'US',
+                        language: 'English',
+                    };
+                }
+            },
+        },
+        template: '<div>姓名：{{this.name}}<br/>' 
+            + '年龄：{{this.age}}岁<br/>'
+            + '地址：{{this.detail.address}}<br/>'
+            + '语言：{{this.detail.language}} </div>',
+    });
+    var myApp = new Vue({
+        el: '#myApp', 
+    });
+</script>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <link href="../css/style.css" rel="stylesheet"> </head>
+<body>
+<div id="myApp">
+    <h1>人生加法</h1>
+    <add-method :a="6" :b="12" v-on:add_event="getAddResult"></add-method>
+    <hr/>
+    <h3>{{result}}</h3>
+</div>
+<script>
+    Vue.component('add-method', {
+        props: ['a', 'b'],
+        template: '<div><button v-on:click="add">加吧</button></div>',
+        methods: {
+            add: function(){
+                var value = 0;
+                value = this.a + this.b;
+                this.$emit('add_event', {
+                    result:value
+                });
+            }
+        },
+    });
+    var myApp = new Vue({
+        el: '#myApp', 
+        data: {
+            result: 0
+        },
+        methods: {
+            getAddResult: function(pval){
+                this.result = pval.result;
+            }
+        },
+    });
+</script>
+</body>
+
+</html>
