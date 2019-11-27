@@ -36,34 +36,24 @@ Vue.js学习
 31. 组件：slot插槽
 32. 组件：组合slot
 
-## 源文件
+## Youtube视频
 
-* https://gitee.com/komavideo/LearnVueJS
-
-## 小马视频频道
-
-http://komavideo.com/vuejs/index.html
+https://www.youtube.com/playlist?list=PLliocbKHJNwvVD74RWi59Ykn3sr56pFdw
 
 **推荐您使用Youtube观看高清视频**
-
-### 2018/04/24
-
-**Vue.js进阶学习课程公开中**
-
-https://gitee.com/komavideo/LearnVueJS2
 
 ### 2018/10/10
 
 **Vue.js 3.0 发布计划**
 
-https://www.bilibili.com/video/av33031932
+https://www.youtube.com/watch?v=Y7pkqbz7MyY
 
 **Per.js - Vue.js的一个新对手**
 
-https://www.bilibili.com/video/av33501775
+https://www.youtube.com/watch?v=U05LXzYNw_E
 
 ### 2019/05/17
 
 **Vue的秘密 - 性能优化九法**
 
-https://www.bilibili.com/video/av52738855
+https://www.youtube.com/watch?v=jOt9XPt4kdM
