@@ -39,7 +39,7 @@ slot是父组件与子组件的通讯方式，可以将父组件的内容显示�
 
 ## 源文件
 
-* https://gitee.com/komavideo/LearnVueJS
+https://github.com/komavideo/LearnVueJS
 
 ## 小马视频频道
 
